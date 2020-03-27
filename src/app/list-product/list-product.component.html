@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>New Arrivals</h2>
+  
+    <div class="row">
+  
+      <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let p of products">
+        <div class="product-top">
+          <img src="p.img" style="width: 352px; height: 240px;">
+                  <div class="overlay">
+                    <button type="button" class=" btn btn-secondary" type="Quick Shop"><i class="fa fa-eye"></i></button>
+                    <button type="button" class=" btn btn-secondary" type="Wishlist"><i class="fa fa-heart-o"></i></button>
+                    <button type="button" class=" btn btn-secondary" type="Add To Cart"><i class="fa fa-shopping-cart"></i></button>
+                  </div>
+          </div>
+          <div class="card-footer text-center">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <h3>{{p.name}}</h3>
+            <h5>${{p.price}}</h5>
+          </div>
+        </div>
+      
+    </div>
+  </div>

@@ -1,0 +1,30 @@
+<div class="container">
+<h2 style="text-transform: uppercase;">Product manager</h2>
+<a class="nav-link" routerLink="add" routerLinkActive = "active">Add product</a>
+
+<table class="table table-striped mt-3 ">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Desciption</th>
+            <th>Price</th>
+            <th>Image</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of products">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.desc}}</td>
+            <td>{{p.price}}</td>
+            <td><img src="{{p.img}}" style="width: 200px; height: 120px; ;"></td>
+            <td>
+                <a [routerLink]=""><i class="fa fa-pencil"></i></a>
+                <a style="color: red; cursor: pointer; margin-left: 10px;" ><i class="fa fa-trash-o"></i></a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
