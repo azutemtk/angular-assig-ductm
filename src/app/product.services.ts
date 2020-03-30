@@ -8,7 +8,7 @@ import { Product } from './models/product'
   })
   export class ProductService {
 
-    api = 'http://5e7c3fdca917d7001668305b.mockapi.io/product/product';
+    api = 'https://5e7c3fdca917d7001668305b.mockapi.io/product/product';
     constructor(
       private http : HttpClient,
     ) { }
