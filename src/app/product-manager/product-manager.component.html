@@ -1,6 +1,6 @@
 <div class="container">
-<h2 style="text-transform: uppercase;">Product manager</h2>
-<a class="nav-link" routerLink="add" routerLinkActive = "active">Add product</a>
+<h2 style="text-transform: uppercase; color: #2152f3;"><a (click)="backToManager()">Product manager </a></h2>
+<a class="nav-link" routerLink="add" routerLinkActive = "active" style="color: #f72626;">Add product</a>
 
 <table class="table table-striped mt-3 ">
     <thead>
@@ -14,17 +14,22 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let p of products">
+        <tr *ngFor="let p of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
             <td>{{p.id}}</td>
             <td>{{p.name}}</td>
             <td>{{p.desc}}</td>
             <td>{{p.price}}</td>
             <td><img src="{{p.img}}" style="width: 200px; height: 120px; ;"></td>
             <td>
-                <a [routerLink]=""><i class="fa fa-pencil"></i></a>
-                <a style="color: red; cursor: pointer; margin-left: 10px;" ><i class="fa fa-trash-o"></i></a>
+                <a routerLink="edit/{{p.id}}"><i class="fa fa-pencil" ></i></a>
+                <a style="color: red; cursor: pointer; margin-left: 10px;" (click)="deleteProduct(p)" ><i class="fa fa-trash-o"></i></a>
             </td>
         </tr>
     </tbody>
+    <ngb-pagination
+    [(page)]="page"
+    [pageSize]="pageSize"
+    [collectionSize]="products.length">
+    </ngb-pagination>
 </table>
 </div>

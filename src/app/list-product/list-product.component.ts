@@ -5,11 +5,14 @@ import { ProductService } from '../product.services';
 @Component({
   selector: 'app-list-product',
   templateUrl: './list-product.component.html',
-  styleUrls: ['./list-product.component.css']
+  styleUrls: ['./list-product.component.scss']
 })
 export class ListProductComponent implements OnInit {
 
   products : Product [];
+  
+  page = 1;
+  pageSize = 6;
 
   constructor(
     private productService: ProductService

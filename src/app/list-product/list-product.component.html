@@ -3,9 +3,9 @@
   
     <div class="row">
   
-      <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let p of products">
+      <div ngClass="col-lg-4 col-md-6 mb-4" *ngFor="let p of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
         <div class="product-top">
-          <img src="p.img" style="width: 352px; height: 240px;">
+          <img src="{{p.img}}" style="width: 352px; height: 240px;">
                   <div class="overlay">
                     <button type="button" class=" btn btn-secondary" type="Quick Shop"><i class="fa fa-eye"></i></button>
                     <button type="button" class=" btn btn-secondary" type="Wishlist"><i class="fa fa-heart-o"></i></button>
@@ -22,6 +22,12 @@
             <h5>${{p.price}}</h5>
           </div>
         </div>
-      
+        <ngb-pagination
+        [(page)]="page"
+        [pageSize]="pageSize"
+        [collectionSize]="products.length" style="margin-left: 450px;">
+      </ngb-pagination>
     </div>
   </div>
+
+  

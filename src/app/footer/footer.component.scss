@@ -1,6 +1,5 @@
 
 
-
 p{
     color: rgb(240, 212, 212);
     line-height: 25px;
@@ -16,8 +15,8 @@ h2{
 }
 
 .footer-top{
-    background: #031321;
-    padding: 80px 0;
+    background:  #e3f2fd;;
+    padding-top: 10px;
 
 }
 
@@ -34,17 +33,27 @@ h2{
     text-transform: uppercase;
 }
 
+.segment-one p{
+    font-family: 'Courier New', Courier, monospace;
+    color: #1a41f0;
+}
+
 .segment-two h2{
     font-family: 'Poppins', sans-serif;
     color: #1a41f0;
     text-transform: uppercase;
 }
 
-.segment-two h2::before{
+.segment-two h2:before{
     content: '|';
     color: #c65039;
     padding-right:  10px;
 
+}
+
+.segment-two p{
+    font-family: 'Courier New', Courier, monospace;
+    color: #45ccb8;
 }
 
 .segment-two ul{
@@ -59,8 +68,10 @@ h2{
 }
 
 .segment-two ul li a{
-    color: rgb(240, 212, 212);
+    color: #1a41f0;
     text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color:#1a41f0;
 }
 
 .segment-three h2{
@@ -69,7 +80,7 @@ h2{
     text-transform: uppercase;
 }
 
-.segment-three  h2:before{
+.segment-three h2:before{
     content: '|';
     color: #c65039;
     padding-right: 10px;
@@ -77,15 +88,16 @@ h2{
 
 .segment-three a{
     background: #494848;
-    width: 40px;
+    width: 70px;
     height: 40px;
     display: inline-block;
+    border-right: solid 1px #45ccb8;
 }
 
 .segment-three a i{
     font-size: 20px;
-    color: #fff;
-    padding: 10px 12px;
+    color: #1a41f0;
+    padding: 10px 30px;
 }
 
 .segment-four h2{
@@ -111,6 +123,8 @@ h2{
 
 .fotter-bottom-text p{
     text-align: center;
-    background: #000;
+    background: #404350;
     line-height: 75px;
+    padding-top: 20px;
+    height: 100px;
 }

@@ -1,0 +1,21 @@
+th{
+    color: #1e81d3;
+}
+
+td{
+ color: #2196f3;
+}
+
+td:hover{
+    color:  #1cee9d;
+}
+
+.container{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+
+}
+
